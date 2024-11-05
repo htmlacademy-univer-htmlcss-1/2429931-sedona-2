@@ -245,12 +245,10 @@ button{
   min-width: 0;
   width: 100%;
   height: 100%;
-  /* flex-direction:row; */
 	flex-wrap:wrap;
 }
 
 .button-show {
-  /* display: flex; */
   justify-content: space-between;
   width: 1060px;
 }
@@ -260,32 +258,36 @@ button{
   background-image: url("../images/places/places-1.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  /* width: 1200px; */
   height: 485px;
 }
 
 .advantages-list {
-  display: block;
+  display: flex;
   justify-content: space-between;
-  /* margin: 0;
-  padding: 0; */
   text-align: center;
-
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  flex-wrap:wrap;
 }
 
 .advantages-item {
-  /* width: 400px; */
+  width: 400px;
   height: 385px;
+  margin: 0;
+  position: relative;
+
+}
+
+.advantages-item-img{
+  width: 800px;
+  height: 385px;
+  margin: 0;
 }
 
 .advantages-item-mid {
   width: 400px;
-}
-
-.wrap-advanteges-item {
-  display: flex;
-  width: 1200px;
-  /* justify-content: space-between; */
 }
 
 .advantages-title, .services-name {
@@ -323,6 +325,10 @@ button{
   background-color: #83B3D333;
 }
 
+.services-item{
+  width: 400px;
+}
+
 .advantages-item-edge{
   color: #ffffff;
   background-color: #82B3D3;
@@ -349,9 +355,9 @@ h2 {
 
 .services-list{
   display: flex;
-  justify-content: space-between;
-  /* margin: 0;
-  padding: 0; */
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
   /* text-align: center; */
   height: 385px;
 }
@@ -392,10 +398,10 @@ h2 {
 
 .page-footer {
   background-color: #ffffff;
-  height: 120px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  /* margin-top: auto; */
+  margin-top: auto;
 }
 
 .footer-social-list{
@@ -453,6 +459,7 @@ h2 {
 .product-card-image {
   width: 300px;
   height: 212px;
+  /* position: sticky; */
 }
 
 .product-card-link{
