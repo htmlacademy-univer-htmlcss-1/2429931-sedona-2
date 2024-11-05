@@ -32,23 +32,27 @@ button{
   border: none;
 }
 
-.navigation-button, .search-button {
+.navigation-button, .search-button, .newsletter-button {
   font-weight: 700;
   text-align: center;
   color: #ffffff;
-  background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .navigation-button {
-font-size: 16px;
-line-height: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #756157;
 }
 
-.search-button {
+.search-button, .newsletter-button {
   font-size: 20px;
   line-height: 36px;
+}
+
+.search-button{
+  background-color: #756157;
 }
 
 .page-header {
@@ -163,7 +167,16 @@ h2 {
   background-repeat: no-repeat;
   text-align: center;
 }
+
+.newsletter-button{
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+
 input {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
   color: #000000;
   background-color: #F2F2F2;
   border: none;
@@ -173,11 +186,16 @@ input {
   background-color: #ffffff;
 }
 
+.footer-contacts-address {
+  font-style: normal;
+}
+
 .footer-contacts-address-phone{
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
   color: #000000;
+  text-decoration: none;
 }
 
 /* .visually-hidden {
@@ -265,8 +283,4 @@ input {
 }
 .newsletter-catalog{
   text-align: center;
-}
-
-.text-footer-title{
-  color: #333333;
 }
