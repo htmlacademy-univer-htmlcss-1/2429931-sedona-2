@@ -132,15 +132,23 @@
                         <option value="popular">Сначала популярное</option>
                     </select>
                     <div class="button-show">
-                        <a class="button-cards" href="#">
-                            <span class="visually-hidden">Показать карточки</span>
-                        </a>
-                        <a href="#" class="button-light">
-                            <span class="visually-hidden">Показать что то</span>
-                        </a>
-                        <a href="#" class="button-list">
-                            <span class="visually-hidden">Показать список</span>
-                        </a>
+                        <ul class="button-show-list">
+                            <li class="button-show-item">
+                                <a class="card-grid-toggle card-grid-toggle-current button-cards" href="#">
+                                    <span class="visually-hidden">Показать карточки</span>
+                                </a>
+                            </li>
+                            <li class="card-grid-toggle button-show-item">
+                                <a href="#" class="button-light">
+                                    <span class="visually-hidden">Показать что то</span>
+                                </a>
+                            </li>
+                            <li class="card-grid-toggle card-grid-toggle-current button-show-item">
+                                <a href="#" class="button-list">
+                                    <span class="visually-hidden">Показать список</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -269,24 +277,18 @@
                 <h2 class="visually-hidden">Давайте дружить</h2>
                 <ul class="footer-social-list">
                     <li class="footer-social-item">
-                        <a class="button" href="#">
-                            <span class="visually-social">
-                                <img class="vk" src="images/social/vk.svg" width="24" height="14" alt="ВКонтакте">
-                            </span>
+                        <a class="footer-social-link footer-social-vk" href="#">
+                            <span class="visually-hidden">vk</span>
                         </a>
                     </li>
                     <li class="footer-social-item">
-                        <a class="button" href="#">
-                            <span class="visually-social">
-                                <img class="twit" src="images/social/twit.svg" width="18" height="16" alt="Твиттер">
-                            </span>
+                        <a class="footer-social-link footer-social-tw" href="#">
+                            <span class="visually-hidden">twitter</span>
                         </a>
                     </li>
                     <li class="footer-social-item">
-                        <a class="button" href="#">
-                            <span class="visually-social">
-                                <img class="insta" src="images/social/inst.svg" width="22" height="17" alt="Инстаграм">
-                            </span>
+                        <a class="footer-social-link footer-social-youtube" href="#">
+                            <span class="visually-hidden">Youtube</span>
                         </a>
                     </li>
                 </ul>
