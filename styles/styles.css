@@ -69,7 +69,6 @@ button{
 
 .navigation {
   display: flex;
-  /* flex-wrap: wrap; */
   margin: 0;
   width: auto;
   padding: 0 70px;
@@ -83,7 +82,6 @@ button{
   padding: 0;
   align-items: center;
   min-width: none;
-  /* padding-right: 30px; */
 }
 
 .navigation-link{
@@ -100,7 +98,6 @@ button{
   display: block;
   width: 44px;
   height: 64px;
-  /* padding: 0 12px; */
   padding: 0;
   text-align: center;
   line-height: 64px;
@@ -109,9 +106,8 @@ button{
 .navigation-button {
   white-space: nowrap;
   font-size: 16px;
-  line-height: 20px;
-  margin-left: 20px;
   margin: 14px 0;
+  margin-left: 20px;
   padding: 8px 34px;
 }
 
@@ -122,10 +118,7 @@ button{
   align-items: start;
   margin-left: auto;
   flex-direction: row;
-  /* min-width: 268px; */
   padding-right: 0;
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
 }
 
 /* main */
@@ -375,7 +368,10 @@ button{
 }
 
 .footer-social-vk {
-  background-image: url("../images/social/vk.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #83B3D3;
 }
 
 .footer-social-tw {
@@ -546,22 +542,20 @@ fieldset{
 .catalog-filter-button{
   display: flex;
   flex-direction: column;
-  padding: auto;
   justify-content: end;
-  align-items: center;
 }
 
 .filter-button {
-  margin: 0;
-  padding: 0;
-  display: block;
-  width: 191px;
-  height: 36px;
+  vertical-align: middle;
+  padding: 8px 50px;
 }
+
 .filter-button:nth-child(1){
   margin-bottom: 32px;
 }
-
+.bt{
+  height: 48px;
+}
 /* catalog found */
 
 .hotel-found{
@@ -639,7 +633,7 @@ fieldset{
 
 .pagination-link{
   display: flex;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   justify-content: center;
   align-items: center;
   color: #ffffff;
@@ -668,24 +662,41 @@ fieldset{
 /* products */
 
 .product-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3,340px);
+  gap: 20px;
   padding: 0;
   margin: 0;
   min-width: 0;
   width: 100%;
-	flex-wrap:wrap;
-  gap: 20px;
   margin-bottom: 40px;
+  grid-auto-rows: 1fr;
 }
 
 .product-card{
-  text-align: justify;
+  display: grid;
+  column-gap: 20px;
+  row-gap: 16px;
+  grid-template-areas:
+  "img img"
+  "h3 h3"
+  "desc desc"
+  "btn1 btn2"
+  "star rat"
+  ;
+  grid-template-rows: max-content auto max-content min-content min-content;
   max-width: 340px;
+  height: auto;
   padding: 20px;
   box-shadow: inset 0 0 0 1px rgba(230, 230, 230, 1);
 }
 
 .product-card-link{
+  display: block;
+  margin: 0;
+  padding: 0;
+  grid-area: img;
+  width: 300px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -694,13 +705,24 @@ fieldset{
 }
 
 .product-card-image {
+  display: block;
   width: 300px;
   height: 212px;
   padding: 0;
   border: 0;
+  margin: 0;
+}
+
+.product-card-name{
+  min-height: 28px;
+  grid-area: h3;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-discription {
+  grid-area: desc;
+  justify-content: space-between;
   font-size: 18px;
   line-height: 21px;
   font-weight: 300;
@@ -708,12 +730,61 @@ fieldset{
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+}
+
+.rating{
+  display: flex;
+  align-items: center;
+
+}
+.stars{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  grid-area: star;
+  width: 140px;
+}
+
+.fa.checked{
+  width: 18px;
+  height: 17px;
+  margin-right: 6px;
+  /* для примера */
+  background-color: #83B3D3;
+  clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%);
+}
+
+.text-rating{
+  display: flex;
+  grid-area: rat;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+  background-color: #F2F2F2;
+  height: 37px;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-button{
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* display: block; */
+  margin: 0;
+  padding: 0;
  width: 140px;
  height: 36px;
+}
+
+.product-card-more-button{
+  grid-area: btn1;
+}
+
+.product-card-like-button{
+  grid-area: btn2;
 }
 
 .filter-button,
@@ -800,16 +871,6 @@ fieldset{
 
 .filter-button-reset:focus{
   border: 3px solid #83B3D3;
-}
-
-
-.text-rating{
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #333333;
-  text-align: center;
-  background-color: #F2F2F2;
 }
 
 /* newsletter catalog */
