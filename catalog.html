@@ -7,7 +7,7 @@
         <title>Каталог</title>
     </head>
     <body>
-        <header class="page-header">
+        <header class="page-header" data-test="header">
             <nav class="navigation">
                 <a class="navigation-logo" href="index.html">
                 <img class="logo" src="images/logo-sedona.svg" width="140" height="71" alt="Логотип Седона.">
@@ -41,8 +41,8 @@
                 </ul>
             </nav>
         </header>
-        <main class="main-catalog-hotel">
-            <div class="warp-catalog">
+        <main class="main-catalog-hotel" data-test="main">
+            <div class="warp-catalog" data-test=" filter">
                 <header class="catalog-header">
                     <h1 class="catalog-header-title">Гостиницы Седоны</h1>
                     <ul class="movement">
@@ -123,7 +123,7 @@
                         </form>
                 </section>
             </div>
-            <section class="catalog-hotel-found">
+            <section class="catalog-hotel-found" data-test="catalog">
                 <div class="catalog-hotel-found-wrap">
                     <h2 class="hotel-found">Найдено гостиниц: 38</h2>
                     <select class="select-control" aria-label="Сортировка">
@@ -282,7 +282,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="newsletter newsletter-catalog">
+            <section class="newsletter newsletter-catalog" data-test="subscribe">
                 <div class="newsletter-catalog-header">
                     <h2 class="newsletter-page-title">Подпишитесь на рассылку</h2>
                     <p class="newsletter-text-title">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -297,7 +297,7 @@
             </section>
 
         </main>
-        <footer class="page-footer">
+        <footer class="page-footer" data-test="footer">
             <section class="footer-social">
                 <h2 class="visually-hidden">Давайте дружить</h2>
                 <ul class="footer-social-list">
