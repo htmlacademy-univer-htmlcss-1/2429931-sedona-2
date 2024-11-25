@@ -106,11 +106,6 @@ button{
   text-decoration: line-through;
 }
 
-.navigation-link-one{
-  /* border-bottom: 2px solid #756257; */
-  /* padding:  0; */
-}
-
 .navigation-link-current::before {
   position: absolute;
   right: 16px;
@@ -121,7 +116,7 @@ button{
   content: "";
 }
 
-.navigation-link:hover::before {
+.navigation-list-link .navigation-item .navigation-link:hover::before {
   position: absolute;
   right: 16px;
   bottom: -1px;
@@ -221,6 +216,26 @@ button{
   width: 100%;
   height: 100%;
   flex-wrap:wrap;
+}
+
+.services-svg{
+  height: 72px;
+  width: 75px;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+}
+
+.housing {
+  background-image: url("/images/services/housing.svg");
+}
+
+.food{
+  background-image: url("/images/services/food.svg");
+}
+
+.souvenirs{
+  background-image: url("/images/services/souvenirs.svg");
 }
 
 .advantages-item, .services-item {
@@ -551,7 +566,7 @@ input[type=email]{
   fill: #756157;
 }
 
-.footer-html-academy-link:disabled{
+.footer-html-academy-link:active{
   fill: #756157;
   opacity: 30%;
 }
@@ -1330,4 +1345,355 @@ input[name="to"]{
 .filter_icon {
   background-image: var(--svg-icon);
   filter: blur(2px) hue-rotate(60deg)
+}
+
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242,242, 242, 0.8);
+  z-index: 2;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  overflow-x: hidden;
+  width: 577px;
+  overflow-y: auto;
+}
+
+.modal-close-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-close-button:hover{
+  background-color: #E6E6E6;
+}
+.modal-close-button:focus{
+  outline: 3px solid #83B3D3;
+}
+.modal-close-button:disabled{
+  fill-opacity: 30%;
+}
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+.search-form{
+  display: grid;
+  row-gap: 48px;
+  grid-template-areas:
+  "date1 date1"
+  "date2 date2"
+  "old child"
+  "btn btn"
+  ;
+}
+.field-group .field {
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #F2F2F2;
+  border: none;
+  padding: 12px 20px;
+  width: 440px;
+  height: 48px;
+  margin: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.field:hover{
+  background-color: #E6E6E6;
+}
+.field:focus{
+  outline: 3px solid #83B3D3;
+}
+input[type=email]{
+  font: inherit;
+  font-weight: 700;
+}
+.field::placeholder{
+  text-align: start;
+  font-weight: 400;
+}
+
+.field-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 577px;
+}
+.field-group:nth-child(1){
+  grid-area: date1;
+}
+.field-group:nth-child(2){
+  grid-area: date2;
+}
+
+.field-group:nth-child(3){
+  grid-area: old;
+}
+.field-group:nth-child(4){
+  grid-area: child;
+}
+
+.quantity_inner * {
+  box-sizing: border-box;
+}
+.field-group-btn-count{
+  display: flex;
+}
+
+.quantity_inner:nth-of-type(odd) {
+  justify-content: start;
+}
+.quantity_inner:nth-of-type(odd) label{
+  min-width: 91px;
+}
+.quantity_inner:nth-of-type(even) {
+  justify-content: end;
+}
+.field-group label{
+  display: block;
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.quantity_inner label{
+  /* margin-right: 46px; */
+}
+
+.bt_minus,
+.bt_plus{
+  width: 40px;
+  height: 48px;
+  border-radius: 0;
+  background: #F2F2F2;
+  margin: 0;
+  outline: none;
+}
+.bt_minus{
+  border-radius: 4px 0 0 4px;
+  margin-left: 46px;
+}
+
+.bt_plus{
+  border-radius: 0 4px 4px 0;
+}
+
+.quantity {
+  color: #000;
+  height: 48px;
+  max-width: 31px;
+  padding: 0;
+  padding-right: auto;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  background: #F2F2F2;
+  cursor: pointer;
+  outline: none;
+}
+
+.quantity {
+  width: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.bt_minus svg,
+.bt_plus svg {
+  display: block;
+  margin: auto;
+}
+
+.bt_minus svg,
+.bt_plus svg {
+  fill: #756157;
+  fill-opacity: 0.3;
+}
+
+.bt_minus:hover svg,
+.bt_plus:hover svg {
+  fill: #000;
+  fill-opacity: 100%;
+}
+
+.bt_minus:focus svg,
+.bt_plus:focus svg {
+  fill: #000;
+  fill-opacity: 100%;
+  border: #82B3D3 solid 3px;
+  border-radius: 4px;
+}
+
+.form-label {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 24px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  max-width: 137px;
+}
+
+.field-group{
+  position: relative;
+}
+
+.calendar {
+  position: absolute;
+  top: 14px;
+  left: 537px;
+  background: url("/images/date.svg") no-repeat ;
+  width: 20px;
+  height: 20px;
+}
+
+[type = "date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+[type = "date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.field-group .field::after{
+  display: block;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  background: none;
+  width: 100%;
+  height: 21px;
+  position: absolute;
+  top:100%;
+  margin: 4px;
+}
+
+
+.date-in-field:after{
+  content:'Мы не можем отправить вас в прошлое.';
+  color:#FF5757;
+}
+
+.date-out-field:after{
+  content:'На эти даты есть свободные номера. Пока есть.';
+  color:#333333;
+}
+
+.field-group .field{
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.quantity_inner_children .form-label2{
+  display: flex;
+  gap: 10px;
+}
+
+.button-search{
+  grid-area: btn;
+  width: 577px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  color: #242424;
+  display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  color: #AF7842;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  display: flex;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  text-transform: 400;
+  padding: 15px 18px 18px 22px;
+  border-radius: 8px;
+  width: 256px;
+  height: 143px;
+  position: absolute;
+  left: 50%;
+  top: 41px;
+  transform: translateX(-50%);
+  z-index: 1;
+  align-items: center;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  display: none;
+}
+/* tooltip */
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: flex;
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
 }
