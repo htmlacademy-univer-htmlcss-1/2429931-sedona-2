@@ -227,7 +227,7 @@ button{
 }
 
 .housing {
-  background-image: url("/images/services/housing.svg");
+  background-image: url("../images/services/housing.svg");
 }
 
 .food{
@@ -235,7 +235,7 @@ button{
 }
 
 .souvenirs{
-  background-image: url("/images/services/souvenirs.svg");
+  background-image: url("../images/services/souvenirs.svg");
 }
 
 .advantages-item, .services-item {
