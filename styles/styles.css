@@ -768,20 +768,23 @@ fieldset{
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none; /* Кнопки спрятаны */
+  -webkit-appearance: none;
 }
 
 .control-input-cost{
   box-sizing: border-box;
+  appearance: none;
   height: 48px;
   max-width: 143px;
   font-weight: 700;
+  font-size: 18px;
   background-color: #F2F2F2;
   border: none;
   margin: 0;
   padding: 0 20px;
   cursor: pointer;
 }
+
 .control-input-cost:hover{
   background-color: #E6E6E6;
 }
@@ -793,6 +796,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .input-container {
   position: relative;
   width: 100%;
+  /* height: 100%; */
 }
 
 .placeholder {
@@ -800,12 +804,12 @@ input[type="number"]::-webkit-outer-spin-button {
   display: inline-block;
   height: 24px;
   right: 20px;
-  top: 10px;
+  top: 9px;
   font: inherit;
   font-size: 18px;
-  color: #8e8e8e;
-  pointer-events: none; /* Чтобы текст не мешал вводу */
-  transition: 0.2s ease all;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 .range{
@@ -817,10 +821,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .range-scale {
   position: relative;
   height: 4px;
-  /* margin-bottom: 16px; */
   background-color: rgba(255, 255, 255, 0.3);
-  /* opacity: 30%; */
-  /* border-radius: 2px; */
 }
 
 .range-bar {
@@ -828,7 +829,6 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 4px;
   background-color: #ffffff;
   opacity: 100%;
-  /* width: 700px; */
 }
 
 .range-toggle {
@@ -836,7 +836,6 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 20px;
   height: 20px;
   background: #ffffff;
-  /* border: 2px solid #242424; */
   border-radius: 5px;
   cursor: pointer;
 }
@@ -876,17 +875,14 @@ input[name="to"]{
 
 .filter-button {
   vertical-align: middle;
-  /* padding: 8px 50px; */
   height: 36px;
   width: 191px;
 }
 
-/* .filter-button:nth-child(1){
-  margin-bottom: 32px;
-} */
 .bt{
   height: 48px;
 }
+
 /* catalog found */
 
 .hotel-found{
@@ -926,20 +922,12 @@ input[name="to"]{
 }
 
 .button-show-item{
-
-  /* border: 2px solid transparent; */
-  /* border: 2px solid #E5E5E5; */
-  /* border-radius: 4px; */
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
   padding: 0;
   margin: 0;
   height: 44px;
   width: 44px;
-  /* border: #000; */
-  /* background: url("/images/show/all.svg") no-repeat; */
 }
+
 .card-grid-toggle{
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1001,7 +989,6 @@ input[name="to"]{
   padding: 0;
   margin: 0;
   list-style-type: none;
-  /* max-width: 400px; */
   flex-wrap: wrap;
 }
 
@@ -1015,13 +1002,8 @@ input[name="to"]{
   border-radius: 4px;
 }
 
-/* .pagination-item-current{
-  background-color: #F2F2F2;
-} */
-
 .pagination-link{
   display: flex;
-  /* box-sizing: border-box; */
   justify-content: center;
   align-items: center;
   color: #ffffff;
@@ -1140,9 +1122,7 @@ input[name="to"]{
   width: 18px;
   height: 17px;
   margin-right: 6px;
-  /* для примера */
-  /* background-color: #83B3D3; */
-  background-image: url("/images/star.svg");
+  background-image: url("../images/star.svg");
   /* clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%); */
 }
 
@@ -1162,10 +1142,6 @@ input[name="to"]{
 }
 
 .product-button{
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* display: block; */
   margin: 0;
   padding: 0;
  width: 140px;
@@ -1309,11 +1285,11 @@ input[name="to"]{
 .pagination-item-current{
   background-color: #F2F2F2;
 }
+
 /* newsletter catalog */
 
 .visually-hidden {
   visibility: hidden;
-  /* display: none; */
   color: red;
   height: 0;
   width: 0;
@@ -1347,6 +1323,7 @@ input[name="to"]{
   filter: blur(2px) hue-rotate(60deg)
 }
 
+/* modal */
 
 .modal-container {
   position: fixed;
@@ -1362,13 +1339,13 @@ input[name="to"]{
 .modal {
   position: relative;
   margin: auto;
+  display: flex;
   padding: 64px 70px;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
-  overflow-x: hidden;
-  width: 577px;
-  overflow-y: auto;
+  overflow-x: auto;
+  width: auto;
 }
 
 .modal-close-button {
@@ -1396,6 +1373,7 @@ input[name="to"]{
 .modal-close-button:disabled{
   fill-opacity: 30%;
 }
+
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
@@ -1405,94 +1383,67 @@ input[name="to"]{
   color: #000000;
   text-transform: uppercase;
 }
+
 .search-form{
-  display: grid;
-  row-gap: 48px;
-  grid-template-areas:
-  "date1 date1"
-  "date2 date2"
-  "old child"
-  "btn btn"
-  ;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  min-width: 577px;
 }
+
+.field-group{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
 .field-group .field {
   box-sizing: border-box;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #000000;
-  background-color: #F2F2F2;
-  border: none;
-  padding: 12px 20px;
   width: 440px;
-  height: 48px;
-  margin: 0;
-  border-radius: 4px;
-  cursor: pointer;
 }
+
 .field:hover{
   background-color: #E6E6E6;
 }
+
 .field:focus{
   outline: 3px solid #83B3D3;
 }
+
 input[type=email]{
   font: inherit;
   font-weight: 700;
 }
+
 .field::placeholder{
   text-align: start;
   font-weight: 400;
 }
 
-.field-group{
+.quantity_inner{
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+}
+
+.quantity_inner-g{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
   justify-content: space-between;
-  align-items: center;
-  max-width: 577px;
-}
-.field-group:nth-child(1){
-  grid-area: date1;
-}
-.field-group:nth-child(2){
-  grid-area: date2;
-}
-
-.field-group:nth-child(3){
-  grid-area: old;
-}
-.field-group:nth-child(4){
-  grid-area: child;
-}
-
-.quantity_inner * {
-  box-sizing: border-box;
 }
 .field-group-btn-count{
   display: flex;
 }
 
-.quantity_inner:nth-of-type(odd) {
-  justify-content: start;
-}
-.quantity_inner:nth-of-type(odd) label{
-  min-width: 91px;
-}
-.quantity_inner:nth-of-type(even) {
-  justify-content: end;
-}
 .field-group label{
-  display: block;
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-}
-
-.quantity_inner label{
-  /* margin-right: 46px; */
 }
 
 .bt_minus,
@@ -1506,7 +1457,6 @@ input[type=email]{
 }
 .bt_minus{
   border-radius: 4px 0 0 4px;
-  margin-left: 46px;
 }
 
 .bt_plus{
@@ -1565,19 +1515,20 @@ input[type=email]{
   flex-wrap: wrap;
   line-height: 24px;
   font-weight: 700;
-  justify-content: center;
   align-items: center;
-  max-width: 137px;
+  max-width: 300px;
 }
-
-.field-group{
-  position: relative;
+.form-container{
+  min-width: 440px;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .calendar {
   position: absolute;
-  top: 14px;
-  left: 537px;
+  top: calc(100%/3);
+  right: 20px;
   background: url("/images/date.svg") no-repeat ;
   width: 20px;
   height: 20px;
@@ -1592,19 +1543,16 @@ input[type=email]{
 }
 
 .field-group .field::after{
-  display: block;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
   background: none;
-  width: 100%;
   height: 21px;
   position: absolute;
   top:100%;
   margin: 4px;
 }
-
 
 .date-in-field:after{
   content:'Мы не можем отправить вас в прошлое.';
@@ -1626,25 +1574,34 @@ input[type=email]{
 .quantity_inner_children .form-label2{
   display: flex;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
 }
 
 .button-search{
   grid-area: btn;
-  width: 577px;
+  width: auto;
   height: 60px;
   border-radius: 10px;
 }
 
 .tooltip {
   position: relative;
+  display: block;
+  margin: auto;
+  height: 26px;
+  width: 26px;
+  margin-right: 46px;
 }
 
 .tooltip-toggle {
   border: none;
   background-color: transparent;
   padding: 0;
-  margin: 0;
+  margin: auto;
   display: block;
+  margin-right: 46px;
 }
 
 .tooltip-icon {
@@ -1654,31 +1611,27 @@ input[type=email]{
   display: block;
 }
 
-.tooltip-toggle:hover .tooltip-icon {
-  color: #AF7842;
-}
-
 .tooltip-text {
+  box-sizing: border-box;
   background-color: #333333;
-  display: flex;
+  display: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  font-weight: normal;
-  text-transform: 400;
+  font-weight: 400;
   padding: 15px 18px 18px 22px;
   border-radius: 8px;
   width: 256px;
   height: 143px;
   position: absolute;
   left: 50%;
-  top: 41px;
+  top: 43px;
   transform: translateX(-50%);
   z-index: 1;
   align-items: center;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
-  display: none;
 }
+
 /* tooltip */
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
